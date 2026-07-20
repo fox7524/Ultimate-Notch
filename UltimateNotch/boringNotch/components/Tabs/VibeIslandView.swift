@@ -31,7 +31,12 @@ struct VibeIslandView: View {
                 TabButton(title: "Monitor", icon: "square.grid.2x2", isSelected: selectedTab == .monitor) { selectedTab = .monitor }
                 TabButton(title: "Approve", icon: "hand.thumbsup", isSelected: selectedTab == .approve) { selectedTab = .approve }
                 TabButton(title: "Ask", icon: "bubble.left.and.bubble.right", isSelected: selectedTab == .ask) { selectedTab = .ask }
-                TabButton(title: "Jump", icon: "arrow.up.right.square", isSelected: selectedTab == .jump) { selectedTab = .jump }
+                TabButton(title: "Jump", icon: "arrow.up.right.square", isSelected: selectedTab == .jump) {
+                    selectedTab = .jump
+                    if let activeSession = vibeManager.sessions.first(where: { $0.isActive }) {
+                        vibeManager.jumpToIDE(appName: activeSession.ide)
+                    }
+                }
             }
             .padding(.vertical, 8)
             .padding(.horizontal, 16)
