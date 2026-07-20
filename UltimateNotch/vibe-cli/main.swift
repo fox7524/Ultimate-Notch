@@ -1,0 +1,64 @@
+import Foundation
+import Network
+
+// Minimal implementation to spawn a process and send output to socket
+let args = Array(CommandLine.arguments.dropFirst())
+guard !args.isEmpty else {
+    print("Usage: vibe-cli <command>")
+    exit(1)
+}
+
+let command = args.joined(separator: " ")
+let sessionId = UUID().uuidString
+
+// Detect IDE from environment
+let env = ProcessInfo.processInfo.environment
+var ide = "Terminal"
+if env["TERM_PROGRAM"] == "iTerm.app" { ide = "iTerm2" }
+else if env["TERM_PROGRAM"] == "vscode" { ide = "VS Code" }
+else if env["TERM_PROGRAM"] == "Ghostty" { ide = "Ghostty" }
+else if env["TERM_PROGRAM"] == "WarpTerminal" { ide = "Warp" }
+else if env["__CFBundleIdentifier"] == "com.apple.Terminal" { ide = "Terminal.app" }
+
+let connection = NWConnection(to: .unix(path: "/tmp/vibe_island.sock"), using: .tcp)
+connection.start(queue: .global())
+
+func sendMessage(_ type: String, payload: String? = nil) {
+    let msg: [String: String] = [
+        "type": type,
+        "sessionId": sessionId,
+        "command": command,
+        "ide": ide,
+        "payload": payload ?? ""
+    ]
+    if let data = try? JSONEncoder().encode(msg) {
+        connection.send(content: data, completion: .contentProcessed({ _ in }))
+    }
+}
+
+sendMessage("start")
+
+let task = Process()
+task.executableURL = URL(fileURLWithPath: "/bin/sh")
+task.arguments = ["-c", command]
+
+let pipe = Pipe()
+task.standardOutput = pipe
+task.standardError = pipe
+
+let outHandle = pipe.fileHandleForReading
+outHandle.readabilityHandler = { handle in
+    let data = handle.availableData
+    if data.count > 0 {
+        FileHandle.standardOutput.write(data) // Pass through to real terminal
+        if let text = String(data: data, encoding: .utf8) {
+            sendMessage("output", payload: text)
+        }
+    }
+}
+
+try? task.run()
+task.waitUntilExit()
+
+sendMessage("exit")
+Thread.sleep(forTimeInterval: 0.1) // allow flush
