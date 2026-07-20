@@ -15,7 +15,7 @@ class ClaudeAPI {
     var model: String
     private let session: URLSession
 
-    init(model: String = "claude-sonnet-4-6") {
+    init(model: String = "claude-3-5-sonnet-latest") {
         self.model = model
 
         // Use .default instead of .ephemeral so TLS session tickets are cached.
