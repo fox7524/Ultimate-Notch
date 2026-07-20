@@ -22,7 +22,7 @@ class VibeManager: ObservableObject {
             parameters.requiredLocalEndpoint = NWEndpoint.unix(path: socketPath)
             parameters.allowLocalEndpointReuse = true
             
-            listener = try NWListener(parameters: parameters)
+            listener = try NWListener(using: parameters)
             listener?.newConnectionHandler = { [weak self] connection in
                 Task { @MainActor in
                     self?.handleConnection(connection)
@@ -45,11 +45,15 @@ class VibeManager: ObservableObject {
             guard let self = self else { return }
             
             if let data = data, let message = try? JSONDecoder().decode(VibeMessage.self, from: data) {
-                self.processMessage(message)
+                Task { @MainActor in
+                    self.processMessage(message)
+                }
             }
             
             if !isComplete && error == nil {
-                self.receiveMessage(on: connection)
+                Task { @MainActor in
+                    self.receiveMessage(on: connection)
+                }
             }
         }
     }

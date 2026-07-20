@@ -14,11 +14,19 @@ let sessionId = UUID().uuidString
 // Detect IDE from environment
 let env = ProcessInfo.processInfo.environment
 var ide = "Terminal"
-if env["TERM_PROGRAM"] == "iTerm.app" { ide = "iTerm2" }
-else if env["TERM_PROGRAM"] == "vscode" { ide = "VS Code" }
+if env["TERM_PROGRAM"] == "iTerm.app" { ide = "iTerm" }
+else if env["TERM_PROGRAM"] == "vscode" { ide = "Visual Studio Code" }
 else if env["TERM_PROGRAM"] == "Ghostty" { ide = "Ghostty" }
 else if env["TERM_PROGRAM"] == "WarpTerminal" { ide = "Warp" }
-else if env["__CFBundleIdentifier"] == "com.apple.Terminal" { ide = "Terminal.app" }
+else if env["__CFBundleIdentifier"] == "com.apple.Terminal" { ide = "Terminal" }
+else if env["TERM_PROGRAM"] == "Trae" { ide = "Trae" }
+else if env["TERM_PROGRAM"] == "Cursor" { ide = "Cursor" }
+else if env["TERM_PROGRAM"] == "Codex" { ide = "Codex" }
+else if env["TERM_PROGRAM"] == "Antigravity" { ide = "Antigravity IDE" }
+else if env["TERM_PROGRAM"] == "OpenCode" { ide = "OpenCode" }
+else if env["TERM_PROGRAM"] == "Freebuff" { ide = "Freebuff" }
+else if env["TERM_PROGRAM"] == "Xcode" || env["__CFBundleIdentifier"] == "com.apple.dt.Xcode" { ide = "Xcode" }
+else if env["TERM_PROGRAM"] == "VisualStudio" { ide = "Visual Studio" }
 
 let connection = NWConnection(to: .unix(path: "/tmp/vibe_island.sock"), using: .tcp)
 connection.start(queue: .global())
