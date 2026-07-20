@@ -352,7 +352,7 @@ struct ContentView: View {
                     case .clicky:
                         ClickyView()
                     case .vibeIsland:
-                        VibeIslandPlaceholderView()
+            VibeIslandView()
                     }
                 }
                 .transition(
