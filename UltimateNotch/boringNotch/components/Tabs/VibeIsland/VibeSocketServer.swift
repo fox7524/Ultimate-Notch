@@ -18,13 +18,15 @@ class VibeManager: ObservableObject {
         unlink(socketPath)
         
         do {
-            let parameters = NWParameters(tls: nil, tcp: nil)
+            let parameters = NWParameters()
             parameters.requiredLocalEndpoint = NWEndpoint.unix(path: socketPath)
             parameters.allowLocalEndpointReuse = true
             
             listener = try NWListener(parameters: parameters)
             listener?.newConnectionHandler = { [weak self] connection in
-                self?.handleConnection(connection)
+                Task { @MainActor in
+                    self?.handleConnection(connection)
+                }
             }
             listener?.start(queue: .main)
         } catch {

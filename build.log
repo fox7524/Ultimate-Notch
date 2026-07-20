@@ -1,0 +1,871 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project UltimateNotch/boringNotch.xcodeproj -scheme boringNotch -configuration Debug build
+
+Resolve Package Graph
+
+
+Resolved source packages:
+  Pow: https://github.com/EmergeTools/Pow @ 1.0.5
+  AsyncXPCConnection: https://github.com/ChimeHQ/AsyncXPCConnection @ 1.3.0
+  swiftui-introspect: https://github.com/siteline/swiftui-introspect @ 1.3.0
+  KeyboardShortcuts: https://github.com/sindresorhus/KeyboardShortcuts @ 2.4.0
+  Lottie: https://github.com/airbnb/lottie-spm.git @ 4.5.2
+  Defaults: https://github.com/sindresorhus/Defaults @ 9.0.6
+  MacroVisionKit: https://github.com/TheBoredTeam/MacroVisionKit @ 0.2.0
+  Sparkle: https://github.com/sparkle-project/Sparkle @ 2.9.1
+  SkyLightWindow: https://github.com/Lakr233/SkyLightWindow @ 1.0.0
+  LaunchAtLogin: https://github.com/sindresorhus/LaunchAtLogin-Modern @ 1.1.0
+  swift-syntax: https://github.com/swiftlang/swift-syntax @ 602.0.0
+  swift-collections: https://github.com/apple/swift-collections.git @ 1.3.0
+
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:macOS, arch:arm64, id:00006050-001D58181A89401C, name:My Mac }
+{ platform:macOS, arch:x86_64, id:00006050-001D58181A89401C, name:My Mac }
+{ platform:macOS, name:Any Mac }
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (30 targets)
+    Target 'boringNotch' in project 'boringNotch'
+        ➜ Explicit dependency on target 'BoringNotchXPCHelper' in project 'boringNotch'
+        ➜ Explicit dependency on target 'MacroVisionKit' in project 'MacroVisionKit'
+        ➜ Explicit dependency on target 'Collections' in project 'swift-collections'
+        ➜ Explicit dependency on target 'SkyLightWindow' in project 'SkyLightWindow'
+        ➜ Explicit dependency on target 'Sparkle' in project 'Sparkle'
+        ➜ Explicit dependency on target 'Lottie' in project 'Lottie'
+        ➜ Explicit dependency on target 'LaunchAtLogin' in project 'LaunchAtLogin'
+        ➜ Explicit dependency on target 'KeyboardShortcuts' in project 'KeyboardShortcuts'
+        ➜ Explicit dependency on target 'Defaults' in project 'Defaults'
+        ➜ Explicit dependency on target 'AsyncXPCConnection' in project 'AsyncXPCConnection'
+        ➜ Explicit dependency on target 'SwiftUIIntrospect' in project 'swiftui-introspect'
+    Target 'SwiftUIIntrospect' in project 'swiftui-introspect'
+        ➜ Explicit dependency on target 'SwiftUIIntrospect' in project 'swiftui-introspect'
+    Target 'SwiftUIIntrospect' in project 'swiftui-introspect' (no dependencies)
+    Target 'AsyncXPCConnection' in project 'AsyncXPCConnection'
+        ➜ Explicit dependency on target 'AsyncXPCConnection' in project 'AsyncXPCConnection'
+    Target 'AsyncXPCConnection' in project 'AsyncXPCConnection' (no dependencies)
+    Target 'Defaults' in project 'Defaults'
+        ➜ Explicit dependency on target 'Defaults' in project 'Defaults'
+        ➜ Explicit dependency on target 'Defaults_Defaults' in project 'Defaults'
+    Target 'Defaults' in project 'Defaults'
+        ➜ Explicit dependency on target 'Defaults_Defaults' in project 'Defaults'
+    Target 'Defaults_Defaults' in project 'Defaults' (no dependencies)
+    Target 'KeyboardShortcuts' in project 'KeyboardShortcuts'
+        ➜ Explicit dependency on target 'KeyboardShortcuts' in project 'KeyboardShortcuts'
+        ➜ Explicit dependency on target 'KeyboardShortcuts_KeyboardShortcuts' in project 'KeyboardShortcuts'
+    Target 'KeyboardShortcuts' in project 'KeyboardShortcuts'
+        ➜ Explicit dependency on target 'KeyboardShortcuts_KeyboardShortcuts' in project 'KeyboardShortcuts'
+    Target 'KeyboardShortcuts_KeyboardShortcuts' in project 'KeyboardShortcuts' (no dependencies)
+    Target 'LaunchAtLogin' in project 'LaunchAtLogin'
+        ➜ Explicit dependency on target 'LaunchAtLogin' in project 'LaunchAtLogin'
+    Target 'LaunchAtLogin' in project 'LaunchAtLogin' (no dependencies)
+    Target 'Lottie' in project 'Lottie'
+        ➜ Explicit dependency on target '_LottieStub' in project 'Lottie'
+    Target '_LottieStub' in project 'Lottie' (no dependencies)
+    Target 'Sparkle' in project 'Sparkle' (no dependencies)
+    Target 'SkyLightWindow' in project 'SkyLightWindow'
+        ➜ Explicit dependency on target 'SkyLightWindow' in project 'SkyLightWindow'
+    Target 'SkyLightWindow' in project 'SkyLightWindow' (no dependencies)
+    Target 'Collections' in project 'swift-collections'
+        ➜ Explicit dependency on target 'Collections' in project 'swift-collections'
+        ➜ Explicit dependency on target 'InternalCollectionsUtilities' in project 'swift-collections'
+        ➜ Explicit dependency on target 'BitCollections' in project 'swift-collections'
+        ➜ Explicit dependency on target 'DequeModule' in project 'swift-collections'
+        ➜ Explicit dependency on target 'HashTreeCollections' in project 'swift-collections'
+        ➜ Explicit dependency on target 'HeapModule' in project 'swift-collections'
+        ➜ Explicit dependency on target 'OrderedCollections' in project 'swift-collections'
+        ➜ Explicit dependency on target '_RopeModule' in project 'swift-collections'
+    Target 'Collections' in project 'swift-collections'
+        ➜ Explicit dependency on target 'InternalCollectionsUtilities' in project 'swift-collections'
+        ➜ Explicit dependency on target 'BitCollections' in project 'swift-collections'
+        ➜ Explicit dependency on target 'DequeModule' in project 'swift-collections'
+        ➜ Explicit dependency on target 'HashTreeCollections' in project 'swift-collections'
+        ➜ Explicit dependency on target 'HeapModule' in project 'swift-collections'
+        ➜ Explicit dependency on target 'OrderedCollections' in project 'swift-collections'
+        ➜ Explicit dependency on target '_RopeModule' in project 'swift-collections'
+    Target '_RopeModule' in project 'swift-collections'
+        ➜ Explicit dependency on target 'InternalCollectionsUtilities' in project 'swift-collections'
+    Target 'OrderedCollections' in project 'swift-collections'
+        ➜ Explicit dependency on target 'InternalCollectionsUtilities' in project 'swift-collections'
+    Target 'HeapModule' in project 'swift-collections'
+        ➜ Explicit dependency on target 'InternalCollectionsUtilities' in project 'swift-collections'
+    Target 'HashTreeCollections' in project 'swift-collections'
+        ➜ Explicit dependency on target 'InternalCollectionsUtilities' in project 'swift-collections'
+    Target 'DequeModule' in project 'swift-collections'
+        ➜ Explicit dependency on target 'InternalCollectionsUtilities' in project 'swift-collections'
+    Target 'BitCollections' in project 'swift-collections'
+        ➜ Explicit dependency on target 'InternalCollectionsUtilities' in project 'swift-collections'
+    Target 'InternalCollectionsUtilities' in project 'swift-collections' (no dependencies)
+    Target 'MacroVisionKit' in project 'MacroVisionKit'
+        ➜ Explicit dependency on target 'MacroVisionKit' in project 'MacroVisionKit'
+    Target 'MacroVisionKit' in project 'MacroVisionKit' (no dependencies)
+    Target 'BoringNotchXPCHelper' in project 'boringNotch' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/xcstringstool compile --dry-run --output-directory /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build /Users/fox/Documents/PROJECTS/Ultimate Notch/UltimateNotch/boringNotch/Localizable.xcstrings
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+ReadFileContents /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/share/docc/features.json
+
+Build description signature: 4bf061200485df5ab79780a2221388c0
+Build description path: /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/XCBuildData/4bf061200485df5ab79780a2221388c0.xcbuilddata
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk /Users/fox/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.5-25F70-688ef53f1462e2c8f657fdc38a81448fe082c4a02f00227109f4ed75e425c832.sdkstatcache
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -o /Users/fox/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.5-25F70-688ef53f1462e2c8f657fdc38a81448fe082c4a02f00227109f4ed75e425c832.sdkstatcache
+
+ProcessInfoPlistFile /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/BoringNotchXPCHelper.xpc/Contents/Info.plist /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/BoringNotchXPCHelper/Info.plist (in target 'BoringNotchXPCHelper' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    builtin-infoPlistUtility /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/BoringNotchXPCHelper/Info.plist -producttype com.apple.product-type.xpc-service -expandbuildsettings -platform macosx -o /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/BoringNotchXPCHelper.xpc/Contents/Info.plist
+
+ProcessInfoPlistFile /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Info.plist /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/KeyboardShortcuts.build/Debug/KeyboardShortcuts_KeyboardShortcuts.build/empty-KeyboardShortcuts_KeyboardShortcuts.plist (in target 'KeyboardShortcuts_KeyboardShortcuts' from project 'KeyboardShortcuts')
+    cd /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/SourcePackages/checkouts/KeyboardShortcuts
+    builtin-infoPlistUtility /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/KeyboardShortcuts.build/Debug/KeyboardShortcuts_KeyboardShortcuts.build/empty-KeyboardShortcuts_KeyboardShortcuts.plist -producttype com.apple.product-type.bundle -expandbuildsettings -platform macosx -o /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/KeyboardShortcuts_KeyboardShortcuts.bundle/Contents/Info.plist
+
+ProcessInfoPlistFile /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/Defaults_Defaults.bundle/Contents/Info.plist /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/Defaults.build/Debug/Defaults_Defaults.build/empty-Defaults_Defaults.plist (in target 'Defaults_Defaults' from project 'Defaults')
+    cd /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/SourcePackages/checkouts/Defaults
+    builtin-infoPlistUtility /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/Defaults.build/Debug/Defaults_Defaults.build/empty-Defaults_Defaults.plist -producttype com.apple.product-type.bundle -expandbuildsettings -platform macosx -o /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/Defaults_Defaults.bundle/Contents/Info.plist
+
+SwiftDriver boringNotch normal arm64 com.apple.xcode.tools.swift.compiler (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name boringNotch -Onone @/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/boringNotch.SwiftFileList -DDEBUG -strict-concurrency\=targeted -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -target arm64-apple-macos14.0 -g -module-cache-path /Users/fox/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug -F /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/mediaremote-adapter -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk/System/Library/PrivateFrameworks -emit-localized-strings -emit-localized-strings-path /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64 -c -j18 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/fox/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.5-25F70-688ef53f1462e2c8f657fdc38a81448fe082c4a02f00227109f4ed75e425c832.sdkstatcache -output-file-map /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/boringNotch-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/fox/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/fox/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/boringNotch.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/fox/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/boringNotch_const_extract_protocols.json -Xcc -iquote -Xcc /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/boringNotch-generated-files.hmap -Xcc -I/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/boringNotch-own-target-headers.hmap -Xcc -I/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/boringNotch-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch-24fad2970be8908e3b8516a50e73f4fd-VFS/all-product-headers.yaml -Xcc -iquote -Xcc /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/boringNotch-project-headers.hmap -Xcc -I/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/include -Xcc -I/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/DerivedSources-normal/arm64 -Xcc -I/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/DerivedSources/arm64 -Xcc -I/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/boringNotch-Swift.h -working-directory /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch -experimental-emit-module-separately -disable-cmo
+
+CompileXCStrings /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/ /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/Localizable.xcstrings (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcstringstool compile --output-directory /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/Localizable.xcstrings
+
+CopyStringsFile /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/fr.lproj/Localizable.strings /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/fr.lproj/Localizable.strings (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    builtin-copyStrings --validate --outputencoding UTF-16 --outfilename Localizable.strings --outdir /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/fr.lproj -- /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/fr.lproj/Localizable.strings
+/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/fr.lproj/Localizable.strings:1:1: note: detected encoding of input file as Unicode (UTF-8) (in target 'boringNotch' from project 'boringNotch')
+
+CopyStringsFile /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/en.lproj/Localizable.strings /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/en.lproj/Localizable.strings (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    builtin-copyStrings --validate --outputencoding UTF-16 --outfilename Localizable.strings --outdir /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/en.lproj -- /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/en.lproj/Localizable.strings
+/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/en.lproj/Localizable.strings:1:1: note: detected encoding of input file as Unicode (UTF-8) (in target 'boringNotch' from project 'boringNotch')
+
+CopyStringsFile /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/es.lproj/Localizable.strings /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/es.lproj/Localizable.strings (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    builtin-copyStrings --validate --outputencoding UTF-16 --outfilename Localizable.strings --outdir /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/es.lproj -- /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/es.lproj/Localizable.strings
+/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/es.lproj/Localizable.strings:1:1: note: detected encoding of input file as Unicode (UTF-8) (in target 'boringNotch' from project 'boringNotch')
+
+CopyStringsFile /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/ru.lproj/Localizable.strings /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/ru.lproj/Localizable.strings (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    builtin-copyStrings --validate --outputencoding UTF-16 --outfilename Localizable.strings --outdir /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/ru.lproj -- /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/ru.lproj/Localizable.strings
+/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/ru.lproj/Localizable.strings:1:1: note: detected encoding of input file as Unicode (UTF-8) (in target 'boringNotch' from project 'boringNotch')
+
+CopyStringsFile /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/pl.lproj/Localizable.strings /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/pl.lproj/Localizable.strings (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    builtin-copyStrings --validate --outputencoding UTF-16 --outfilename Localizable.strings --outdir /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/pl.lproj -- /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/pl.lproj/Localizable.strings
+/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/pl.lproj/Localizable.strings:1:1: note: detected encoding of input file as Unicode (UTF-8) (in target 'boringNotch' from project 'boringNotch')
+
+CopyStringsFile /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/de.lproj/Localizable.strings /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/de.lproj/Localizable.strings (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    builtin-copyStrings --validate --outputencoding UTF-16 --outfilename Localizable.strings --outdir /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/de.lproj -- /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/de.lproj/Localizable.strings
+/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/de.lproj/Localizable.strings:1:1: note: detected encoding of input file as Unicode (UTF-8) (in target 'boringNotch' from project 'boringNotch')
+
+CopyStringsFile /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/cs.lproj/Localizable.strings /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/cs.lproj/Localizable.strings (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    builtin-copyStrings --validate --outputencoding UTF-16 --outfilename Localizable.strings --outdir /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/cs.lproj -- /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/cs.lproj/Localizable.strings
+/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/cs.lproj/Localizable.strings:1:1: note: detected encoding of input file as Unicode (UTF-8) (in target 'boringNotch' from project 'boringNotch')
+
+CopyStringsFile /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/en-GB.lproj/Localizable.strings /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/en-GB.lproj/Localizable.strings (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    builtin-copyStrings --validate --outputencoding UTF-16 --outfilename Localizable.strings --outdir /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/en-GB.lproj -- /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/en-GB.lproj/Localizable.strings
+/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/en-GB.lproj/Localizable.strings:1:1: note: detected encoding of input file as Unicode (UTF-8) (in target 'boringNotch' from project 'boringNotch')
+
+CopyStringsFile /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/tr.lproj/Localizable.strings /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/tr.lproj/Localizable.strings (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    builtin-copyStrings --validate --outputencoding UTF-16 --outfilename Localizable.strings --outdir /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/tr.lproj -- /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/tr.lproj/Localizable.strings
+/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/tr.lproj/Localizable.strings:1:1: note: detected encoding of input file as Unicode (UTF-8) (in target 'boringNotch' from project 'boringNotch')
+
+CopyStringsFile /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/pt-BR.lproj/Localizable.strings /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/pt-BR.lproj/Localizable.strings (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    builtin-copyStrings --validate --outputencoding UTF-16 --outfilename Localizable.strings --outdir /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/pt-BR.lproj -- /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/pt-BR.lproj/Localizable.strings
+/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/pt-BR.lproj/Localizable.strings:1:1: note: detected encoding of input file as Unicode (UTF-8) (in target 'boringNotch' from project 'boringNotch')
+
+CopyStringsFile /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/ko.lproj/Localizable.strings /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/ko.lproj/Localizable.strings (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    builtin-copyStrings --validate --outputencoding UTF-16 --outfilename Localizable.strings --outdir /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/ko.lproj -- /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/ko.lproj/Localizable.strings
+/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/ko.lproj/Localizable.strings:1:1: note: detected encoding of input file as Unicode (UTF-8) (in target 'boringNotch' from project 'boringNotch')
+
+CopyStringsFile /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/zh-Hans.lproj/Localizable.strings /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/zh-Hans.lproj/Localizable.strings (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    builtin-copyStrings --validate --outputencoding UTF-16 --outfilename Localizable.strings --outdir /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/zh-Hans.lproj -- /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/zh-Hans.lproj/Localizable.strings
+/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/zh-Hans.lproj/Localizable.strings:1:1: note: detected encoding of input file as Unicode (UTF-8) (in target 'boringNotch' from project 'boringNotch')
+
+CopyStringsFile /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/it.lproj/Localizable.strings /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/it.lproj/Localizable.strings (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    builtin-copyStrings --validate --outputencoding UTF-16 --outfilename Localizable.strings --outdir /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/it.lproj -- /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/it.lproj/Localizable.strings
+/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/it.lproj/Localizable.strings:1:1: note: detected encoding of input file as Unicode (UTF-8) (in target 'boringNotch' from project 'boringNotch')
+
+CopyStringsFile /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/uk.lproj/Localizable.strings /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/uk.lproj/Localizable.strings (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    builtin-copyStrings --validate --outputencoding UTF-16 --outfilename Localizable.strings --outdir /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/uk.lproj -- /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/uk.lproj/Localizable.strings
+/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/uk.lproj/Localizable.strings:1:1: note: detected encoding of input file as Unicode (UTF-8) (in target 'boringNotch' from project 'boringNotch')
+
+CopyStringsFile /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/hu.lproj/Localizable.strings /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/hu.lproj/Localizable.strings (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    builtin-copyStrings --validate --outputencoding UTF-16 --outfilename Localizable.strings --outdir /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/hu.lproj -- /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/hu.lproj/Localizable.strings
+/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/hu.lproj/Localizable.strings:1:1: note: detected encoding of input file as Unicode (UTF-8) (in target 'boringNotch' from project 'boringNotch')
+
+CopyStringsFile /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/ar.lproj/Localizable.strings /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/ar.lproj/Localizable.strings (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    builtin-copyStrings --validate --outputencoding UTF-16 --outfilename Localizable.strings --outdir /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/boringNotch.app/Contents/Resources/ar.lproj -- /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/ar.lproj/Localizable.strings
+/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/ar.lproj/Localizable.strings:1:1: note: detected encoding of input file as Unicode (UTF-8) (in target 'boringNotch' from project 'boringNotch')
+
+SwiftExplicitDependencyCompileModuleFromInterface arm64 /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules/Lottie-3R17QMJCNZICL.swiftmodule
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ boringNotch (in target 'boringNotch' from project 'boringNotch')
+
+EmitSwiftModule normal arm64 (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 Compiling\ NSItemProvider+LoadHelpers.swift,\ MusicControllerSelectionView.swift,\ BrightnessManager.swift,\ ClickyView.swift,\ VibeIslandView.swift,\ AssemblyAIStreamingTranscriptionProvider.swift,\ CGSSpace.swift,\ AppleSpeechTranscriptionProvider.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/NSItemProvider+LoadHelpers.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Onboarding/MusicControllerSelectionView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/managers/BrightnessManager.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Tabs/ClickyView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Tabs/VibeIslandView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/AssemblyAIStreamingTranscriptionProvider.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/private/CGSSpace.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/AppleSpeechTranscriptionProvider.swift (in target 'boringNotch' from project 'boringNotch')
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/NSItemProvider+LoadHelpers.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Onboarding/MusicControllerSelectionView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/managers/BrightnessManager.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Tabs/ClickyView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Tabs/VibeIslandView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/AssemblyAIStreamingTranscriptionProvider.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/private/CGSSpace.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/AppleSpeechTranscriptionProvider.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 Compiling\ ClickyAnalytics.swift,\ OpenAIAPI.swift,\ CompanionScreenCaptureUtility.swift,\ CompanionPanelView.swift,\ OpenAIAudioTranscriptionProvider.swift,\ OverlayWindow.swift,\ AppBundleConfiguration.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/ClickyAnalytics.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/OpenAIAPI.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/CompanionScreenCaptureUtility.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/CompanionPanelView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/OpenAIAudioTranscriptionProvider.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/OverlayWindow.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/AppBundleConfiguration.swift (in target 'boringNotch' from project 'boringNotch')
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/ClickyAnalytics.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/OpenAIAPI.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/CompanionScreenCaptureUtility.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/CompanionPanelView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/OpenAIAudioTranscriptionProvider.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/OverlayWindow.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/AppBundleConfiguration.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 Compiling\ BoringExtrasMenu.swift,\ ImageService.swift,\ MusicControlButton.swift,\ AudioPlayer.swift,\ WebcamManager.swift,\ AppIcons.swift,\ ListItemPopover.swift,\ Constants.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Notch/BoringExtrasMenu.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/managers/ImageService.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/models/MusicControlButton.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/helpers/AudioPlayer.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/managers/WebcamManager.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/helpers/AppIcons.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Settings/ListItemPopover.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/models/Constants.swift (in target 'boringNotch' from project 'boringNotch')
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Notch/BoringExtrasMenu.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/managers/ImageService.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/models/MusicControlButton.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/helpers/AudioPlayer.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/managers/WebcamManager.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/helpers/AppIcons.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Settings/ListItemPopover.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/models/Constants.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 Compiling\ Bookmark.swift,\ PanGesture.swift,\ MusicSlotConfigurationView.swift,\ TabSelectionView.swift,\ NotchSpaceManager.swift,\ DataTypes+Extensions.swift,\ AppleScriptHelper.swift,\ PermissionsRequestView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Models/Bookmark.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/PanGesture.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Settings/MusicSlotConfigurationView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Tabs/TabSelectionView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/managers/NotchSpaceManager.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/DataTypes+Extensions.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/helpers/AppleScriptHelper.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Onboarding/PermissionsRequestView.swift (in target 'boringNotch' from project 'boringNotch')
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Models/Bookmark.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/PanGesture.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Settings/MusicSlotConfigurationView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Tabs/TabSelectionView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/managers/NotchSpaceManager.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/DataTypes+Extensions.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/helpers/AppleScriptHelper.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Onboarding/PermissionsRequestView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 Compiling\ DragPreviewView.swift,\ BatteryActivityManager.swift,\ ConditionalModifier.swift,\ SharingStateManager.swift,\ EmptyState.swift,\ AssociatedObject.swift,\ BoringNotchXPCHelperProtocol.swift,\ XPCHelperClient.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Views/DragPreviewView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/managers/BatteryActivityManager.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/ConditionalModifier.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/models/SharingStateManager.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/EmptyState.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/helpers/AssociatedObject.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/XPCHelperClient/BoringNotchXPCHelperProtocol.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/XPCHelperClient/XPCHelperClient.swift (in target 'boringNotch' from project 'boringNotch')
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Views/DragPreviewView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/managers/BatteryActivityManager.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/ConditionalModifier.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/models/SharingStateManager.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/EmptyState.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/helpers/AssociatedObject.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/XPCHelperClient/BoringNotchXPCHelperProtocol.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/XPCHelperClient/XPCHelperClient.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 Compiling\ ContentView.swift,\ ShelfView.swift,\ YouTubeMusicNetworking.swift,\ YouTubeMusicModels.swift,\ OnboardingView.swift,\ boringNotchApp.swift,\ BundleInfos.swift,\ ShelfStateViewModel.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/ContentView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Views/ShelfView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/MediaControllers/YouTube\ Music\ Controller/YouTubeMusicNetworking.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/MediaControllers/YouTube\ Music\ Controller/YouTubeMusicModels.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Onboarding/OnboardingView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/boringNotchApp.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/BundleInfos.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/ViewModels/ShelfStateViewModel.swift (in target 'boringNotch' from project 'boringNotch')
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/ContentView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Views/ShelfView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/MediaControllers/YouTube\ Music\ Controller/YouTubeMusicNetworking.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/MediaControllers/YouTube\ Music\ Controller/YouTubeMusicModels.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Onboarding/OnboardingView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/boringNotchApp.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/BundleInfos.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/ViewModels/ShelfStateViewModel.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 Compiling\ WindowPositionManager.swift,\ BuddyDictationManager.swift,\ ClaudeAPI.swift,\ BuddyAudioConversionSupport.swift,\ VibeModels.swift,\ VibeSocketServer.swift,\ GeneratedAssetSymbols.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/WindowPositionManager.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/BuddyDictationManager.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/ClaudeAPI.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/BuddyAudioConversionSupport.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Tabs/VibeIsland/VibeModels.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Tabs/VibeIsland/VibeSocketServer.swift /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'boringNotch' from project 'boringNotch')
+Failed frontend command:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -c -filelist /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/sources-1 -primary-file /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/WindowPositionManager.swift -primary-file /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/BuddyDictationManager.swift -primary-file /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/ClaudeAPI.swift -primary-file /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/BuddyAudioConversionSupport.swift -primary-file /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Tabs/VibeIsland/VibeModels.swift -primary-file /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Tabs/VibeIsland/VibeSocketServer.swift -primary-file /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/DerivedSources/GeneratedAssetSymbols.swift -supplementary-output-file-map /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/supplementaryOutputs-18 -emit-localized-strings -emit-localized-strings-path /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64 -target arm64-apple-macos14.0 -module-can-import-version AppKit 2685.60.104 2685.60.104 -module-can-import-version DeveloperToolsSupport 23.40.26 23.40.26 -module-can-import-version SwiftUI 7.5.3 7.5.3 -disable-cross-import-overlay-search -swift-module-cross-import QuickLook /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/QuickLook.framework/Modules/QuickLook.swiftcrossimport/SwiftUI.swiftoverlay -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libFoundationMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#FoundationMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libObservationMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#ObservationMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libPreviewsMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#PreviewsMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libSwiftMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#SwiftMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libSwiftUIMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#SwiftUIMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libTipKitMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#TipKitMacros -disable-implicit-swift-modules -Xcc -fno-implicit-modules -Xcc -fno-implicit-module-maps -explicit-swift-module-map-file /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/boringNotch-dependencies-1.json -debug-module-path /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/boringNotch.swiftmodule -Xllvm -aarch64-use-tbi -enable-objc-interop -stack-check -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -I /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug -F /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/mediaremote-adapter -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk/System/Library/PrivateFrameworks -no-color-diagnostics -Xcc -fno-color-diagnostics -enable-testing -g -debug-info-format\=dwarf -dwarf-version\=4 -module-cache-path /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -swift-version 5 -Onone -D DEBUG -serialize-debugging-options -const-gather-protocols-file /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/boringNotch_const_extract_protocols.json -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -strict-concurrency\=targeted -empty-abi-descriptor -validate-clang-modules-once -clang-build-session-file /Users/fox/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -working-directory -Xcc /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch -enable-anonymous-context-mangled-names -file-compilation-dir /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -Xcc -ivfsstatcache -Xcc /Users/fox/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.5-25F70-688ef53f1462e2c8f657fdc38a81448fe082c4a02f00227109f4ed75e425c832.sdkstatcache -Xcc -I/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/boringNotch-generated-files.hmap -Xcc -I/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/boringNotch-own-target-headers.hmap -Xcc -I/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/boringNotch-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch-24fad2970be8908e3b8516a50e73f4fd-VFS/all-product-headers.yaml -Xcc -iquote -Xcc /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/boringNotch-project-headers.hmap -Xcc -I/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/include -Xcc -I/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/DerivedSources-normal/arm64 -Xcc -I/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/DerivedSources/arm64 -Xcc -I/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/DerivedSources -Xcc -DDEBUG\=1 -no-auto-bridging-header-chaining -module-name boringNotch -frontend-parseable-output -disable-clang-spi -clang-target arm64-apple-macos26.5 -target-sdk-version 26.5 -target-sdk-name macosx26.5 -in-process-plugin-server-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/libSwiftInProcPluginServer.dylib -o /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/WindowPositionManager.o -o /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/BuddyDictationManager.o -o /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/ClaudeAPI.o -o /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/BuddyAudioConversionSupport.o -o /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/VibeModels.o -o /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/VibeSocketServer.o -o /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/GeneratedAssetSymbols.o -index-unit-output-path /boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/WindowPositionManager.o -index-unit-output-path /boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/BuddyDictationManager.o -index-unit-output-path /boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/ClaudeAPI.o -index-unit-output-path /boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/BuddyAudioConversionSupport.o -index-unit-output-path /boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/VibeModels.o -index-unit-output-path /boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/VibeSocketServer.o -index-unit-output-path /boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/GeneratedAssetSymbols.o -index-store-path /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Index.noindex/DataStore -index-system-modules
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/WindowPositionManager.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/BuddyDictationManager.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/ClaudeAPI.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/BuddyAudioConversionSupport.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Tabs/VibeIsland/VibeModels.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Tabs/VibeIsland/VibeSocketServer.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+/Users/fox/Documents/PROJECTS/Ultimate Notch/UltimateNotch/boringNotch/components/Tabs/VibeIsland/VibeSocketServer.swift:21:58: error: 'nil' is not compatible with expected argument type 'NWProtocolTCP.Options'
+            let parameters = NWParameters(tls: nil, tcp: nil)
+                                                         ^
+/Users/fox/Documents/PROJECTS/Ultimate Notch/UltimateNotch/boringNotch/components/Tabs/VibeIsland/VibeSocketServer.swift:25:39: error: missing argument for parameter 'launchdSocketKey' in call
+            listener = try NWListener(parameters: parameters)
+                                      ^
+                                      launchdSocketKey: <#String#>, 
+Network.NWListener.init:7:22: note: 'init(launchdSocketKey:parameters:)' declared here
+  public convenience init(launchdSocketKey: String, parameters: NWParameters)}
+                     ^
+/Users/fox/Documents/PROJECTS/Ultimate Notch/UltimateNotch/boringNotch/components/Tabs/VibeIsland/VibeSocketServer.swift:27:23: error: call to main actor-isolated instance method 'handleConnection' in a synchronous nonisolated context
+                self?.handleConnection(connection)
+                      ^
+/Users/fox/Documents/PROJECTS/Ultimate Notch/UltimateNotch/boringNotch/components/Tabs/VibeIsland/VibeSocketServer.swift:35:18: note: calls to instance method 'handleConnection' from outside of its actor context are implicitly asynchronous
+    private func handleConnection(_ connection: NWConnection) {
+                 ^
+/Users/fox/Documents/PROJECTS/Ultimate Notch/UltimateNotch/boringNotch/components/Tabs/VibeIsland/VibeSocketServer.swift:46:22: warning: call to main actor-isolated instance method 'processMessage' in a synchronous nonisolated context
+                self.processMessage(message)
+                     ^
+/Users/fox/Documents/PROJECTS/Ultimate Notch/UltimateNotch/boringNotch/components/Tabs/VibeIsland/VibeSocketServer.swift:55:18: note: calls to instance method 'processMessage' from outside of its actor context are implicitly asynchronous
+    private func processMessage(_ msg: VibeMessage) {
+                 ^
+/Users/fox/Documents/PROJECTS/Ultimate Notch/UltimateNotch/boringNotch/components/Tabs/VibeIsland/VibeSocketServer.swift:50:22: warning: call to main actor-isolated instance method 'receiveMessage(on:)' in a synchronous nonisolated context
+                self.receiveMessage(on: connection)
+                     ^
+/Users/fox/Documents/PROJECTS/Ultimate Notch/UltimateNotch/boringNotch/components/Tabs/VibeIsland/VibeSocketServer.swift:41:18: note: calls to instance method 'receiveMessage(on:)' from outside of its actor context are implicitly asynchronous
+    private func receiveMessage(on connection: NWConnection) {
+                 ^
+
+SwiftCompile normal arm64 /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 Compiling\ InlineHUD.swift,\ DownloadView.swift,\ EditPanelView.swift,\ TipStore.swift,\ PlaybackState.swift,\ FullscreenMediaDetection.swift,\ Button+Bouncing.swift,\ BoringViewModel.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Live\ activities/InlineHUD.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Live\ activities/DownloadView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Settings/EditPanelView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Tips/TipStore.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/models/PlaybackState.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/observers/FullscreenMediaDetection.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/Button+Bouncing.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/models/BoringViewModel.swift (in target 'boringNotch' from project 'boringNotch')
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Live\ activities/InlineHUD.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Live\ activities/DownloadView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Settings/EditPanelView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Tips/TipStore.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/models/PlaybackState.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/observers/FullscreenMediaDetection.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/Button+Bouncing.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/models/BoringViewModel.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 Compiling\ matters.swift,\ SettingsView.swift,\ AppleMusicController.swift,\ SettingsWindowController.swift,\ TemporaryFileStorageService.swift,\ OnboardingFinishView.swift,\ HoverButton.swift,\ BoringNotchWindow.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/sizing/matters.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Settings/SettingsView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/MediaControllers/AppleMusicController.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Settings/SettingsWindowController.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Services/TemporaryFileStorageService.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Onboarding/OnboardingFinishView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/HoverButton.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Notch/BoringNotchWindow.swift (in target 'boringNotch' from project 'boringNotch')
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/sizing/matters.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Settings/SettingsView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/MediaControllers/AppleMusicController.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Settings/SettingsWindowController.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Services/TemporaryFileStorageService.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Onboarding/OnboardingFinishView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/HoverButton.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Notch/BoringNotchWindow.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 Compiling\ ShelfDropService.swift,\ QuickShareService.swift,\ ShelfActionService.swift,\ NotchShape.swift,\ MediaKeyInterceptor.swift,\ NSImage+Extensions.swift,\ WebcamView.swift,\ MusicManager.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Services/ShelfDropService.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Services/QuickShareService.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Services/ShelfActionService.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Notch/NotchShape.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/observers/MediaKeyInterceptor.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/NSImage+Extensions.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Webcam/WebcamView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/managers/MusicManager.swift (in target 'boringNotch' from project 'boringNotch')
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Services/ShelfDropService.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Services/QuickShareService.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Services/ShelfActionService.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Notch/NotchShape.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/observers/MediaKeyInterceptor.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/NSImage+Extensions.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Webcam/WebcamView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/managers/MusicManager.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 Compiling\ LottieView.swift,\ MarqueeTextView.swift,\ ProgressIndicator.swift,\ ShelfItemView.swift,\ ShelfPersistenceService.swift,\ ShelfItem.swift,\ ShelfSelectionModel.swift,\ QuickLookService.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/LottieView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Live\ activities/MarqueeTextView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/ProgressIndicator.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Views/ShelfItemView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Services/ShelfPersistenceService.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Models/ShelfItem.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/ViewModels/ShelfSelectionModel.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Services/QuickLookService.swift (in target 'boringNotch' from project 'boringNotch')
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/LottieView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Live\ activities/MarqueeTextView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/ProgressIndicator.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Views/ShelfItemView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Services/ShelfPersistenceService.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Models/ShelfItem.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/ViewModels/ShelfSelectionModel.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Services/QuickLookService.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 Compiling\ MouseTracker.swift,\ ActionBar.swift,\ URL+SecurityScoped.swift,\ YouTubeMusicAuthentication.swift,\ HelloAnimation.swift,\ NSScreen+UUID.swift,\ MediaControllerProtocol.swift,\ NotchHomeView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/MouseTracker.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/ActionBar.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/URL+SecurityScoped.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/MediaControllers/YouTube\ Music\ Controller/YouTubeMusicAuthentication.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/animations/HelloAnimation.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/NSScreen+UUID.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/MediaControllers/MediaControllerProtocol.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Notch/NotchHomeView.swift (in target 'boringNotch' from project 'boringNotch')
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/MouseTracker.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/ActionBar.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/URL+SecurityScoped.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/MediaControllers/YouTube\ Music\ Controller/YouTubeMusicAuthentication.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/animations/HelloAnimation.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/NSScreen+UUID.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/MediaControllers/MediaControllerProtocol.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Notch/NotchHomeView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 Compiling\ generic.swift,\ NSMenu+AssociatedObject.swift,\ KeyboardShortcutsHelper.swift,\ BoringHeader.swift,\ WhatsNewView.swift,\ CalendarManager.swift,\ BoringBattery.swift,\ TestView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/enums/generic.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/NSMenu+AssociatedObject.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/KeyboardShortcutsHelper.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Notch/BoringHeader.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/WhatsNewView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/managers/CalendarManager.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Live\ activities/BoringBattery.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/TestView.swift (in target 'boringNotch' from project 'boringNotch')
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/enums/generic.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/NSMenu+AssociatedObject.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/KeyboardShortcutsHelper.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Notch/BoringHeader.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/WhatsNewView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/managers/CalendarManager.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Live\ activities/BoringBattery.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/TestView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 Compiling\ LiveActivityModifier.swift,\ ThumbnailService.swift,\ WelcomeView.swift,\ AnimatedFace.swift,\ SoftwareUpdater.swift,\ DragDetector.swift,\ SystemEventIndicatorModifier.swift,\ ImageProcessingService.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Live\ activities/LiveActivityModifier.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Services/ThumbnailService.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Onboarding/WelcomeView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/AnimatedFace.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Settings/SoftwareUpdater.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/observers/DragDetector.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Live\ activities/SystemEventIndicatorModifier.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Services/ImageProcessingService.swift (in target 'boringNotch' from project 'boringNotch')
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Live\ activities/LiveActivityModifier.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Services/ThumbnailService.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Onboarding/WelcomeView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/AnimatedFace.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Settings/SoftwareUpdater.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/observers/DragDetector.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Live\ activities/SystemEventIndicatorModifier.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Services/ImageProcessingService.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 Compiling\ EventModel.swift,\ drop.swift,\ ShelfItemViewModel.swift,\ YouTubeMusicController.swift,\ CalendarModel.swift,\ SpotifyController.swift,\ ShareServiceFinder.swift,\ LottieAnimationView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/models/EventModel.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/animations/drop.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/ViewModels/ShelfItemViewModel.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/MediaControllers/YouTube\ Music\ Controller/YouTubeMusicController.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/models/CalendarModel.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/MediaControllers/SpotifyController.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Services/ShareServiceFinder.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Music/LottieAnimationView.swift (in target 'boringNotch' from project 'boringNotch')
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/models/EventModel.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/animations/drop.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/ViewModels/ShelfItemViewModel.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/MediaControllers/YouTube\ Music\ Controller/YouTubeMusicController.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/models/CalendarModel.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/MediaControllers/SpotifyController.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Services/ShareServiceFinder.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Music/LottieAnimationView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 Compiling\ OpenNotchHUD.swift,\ BoringCalendar.swift,\ ApplicationRelauncher.swift,\ FileShareView.swift,\ MusicVisualizer.swift,\ BoringViewCoordinator.swift,\ ShortcutConstants.swift,\ MediaChecker.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Live\ activities/OpenNotchHUD.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Calendar/BoringCalendar.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/helpers/ApplicationRelauncher.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Views/FileShareView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Music/MusicVisualizer.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/BoringViewCoordinator.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/Shortcuts/ShortcutConstants.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/helpers/MediaChecker.swift (in target 'boringNotch' from project 'boringNotch')
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Live\ activities/OpenNotchHUD.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Calendar/BoringCalendar.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/helpers/ApplicationRelauncher.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Shelf/Views/FileShareView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Music/MusicVisualizer.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/BoringViewCoordinator.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/Shortcuts/ShortcutConstants.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/helpers/MediaChecker.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 Compiling\ BoringNotchSkyLightWindow.swift,\ BatteryStatusViewModel.swift,\ TabButton.swift,\ NowPlayingController.swift,\ Color+AccentColor.swift,\ SparkleView.swift,\ CalendarServiceProviding.swift,\ VolumeManager.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Notch/BoringNotchSkyLightWindow.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/models/BatteryStatusViewModel.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Tabs/TabButton.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/MediaControllers/NowPlayingController.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/Color+AccentColor.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Onboarding/SparkleView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/Providers/CalendarServiceProviding.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/managers/VolumeManager.swift (in target 'boringNotch' from project 'boringNotch')
+Failed frontend command:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -c -filelist /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/sources-1 -primary-file /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Notch/BoringNotchSkyLightWindow.swift -primary-file /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/models/BatteryStatusViewModel.swift -primary-file /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Tabs/TabButton.swift -primary-file /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/MediaControllers/NowPlayingController.swift -primary-file /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/Color+AccentColor.swift -primary-file /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Onboarding/SparkleView.swift -primary-file /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/Providers/CalendarServiceProviding.swift -primary-file /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/managers/VolumeManager.swift -supplementary-output-file-map /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/supplementaryOutputs-3 -emit-localized-strings -emit-localized-strings-path /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64 -target arm64-apple-macos14.0 -module-can-import-version AppKit 2685.60.104 2685.60.104 -module-can-import-version DeveloperToolsSupport 23.40.26 23.40.26 -module-can-import-version SwiftUI 7.5.3 7.5.3 -disable-cross-import-overlay-search -swift-module-cross-import QuickLook /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/QuickLook.framework/Modules/QuickLook.swiftcrossimport/SwiftUI.swiftoverlay -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libFoundationMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#FoundationMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libObservationMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#ObservationMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libPreviewsMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#PreviewsMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libSwiftMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#SwiftMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libSwiftUIMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#SwiftUIMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libTipKitMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#TipKitMacros -disable-implicit-swift-modules -Xcc -fno-implicit-modules -Xcc -fno-implicit-module-maps -explicit-swift-module-map-file /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/boringNotch-dependencies-1.json -debug-module-path /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/boringNotch.swiftmodule -Xllvm -aarch64-use-tbi -enable-objc-interop -stack-check -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -I /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/PackageFrameworks -F /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug -F /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/mediaremote-adapter -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk/System/Library/PrivateFrameworks -no-color-diagnostics -Xcc -fno-color-diagnostics -enable-testing -g -debug-info-format\=dwarf -dwarf-version\=4 -module-cache-path /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -swift-version 5 -Onone -D DEBUG -serialize-debugging-options -const-gather-protocols-file /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/boringNotch_const_extract_protocols.json -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -strict-concurrency\=targeted -empty-abi-descriptor -validate-clang-modules-once -clang-build-session-file /Users/fox/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -working-directory -Xcc /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch -enable-anonymous-context-mangled-names -file-compilation-dir /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -Xcc -ivfsstatcache -Xcc /Users/fox/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.5-25F70-688ef53f1462e2c8f657fdc38a81448fe082c4a02f00227109f4ed75e425c832.sdkstatcache -Xcc -I/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/boringNotch-generated-files.hmap -Xcc -I/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/boringNotch-own-target-headers.hmap -Xcc -I/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/boringNotch-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch-24fad2970be8908e3b8516a50e73f4fd-VFS/all-product-headers.yaml -Xcc -iquote -Xcc /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/boringNotch-project-headers.hmap -Xcc -I/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Products/Debug/include -Xcc -I/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/DerivedSources-normal/arm64 -Xcc -I/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/DerivedSources/arm64 -Xcc -I/Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/DerivedSources -Xcc -DDEBUG\=1 -no-auto-bridging-header-chaining -module-name boringNotch -frontend-parseable-output -disable-clang-spi -clang-target arm64-apple-macos26.5 -target-sdk-version 26.5 -target-sdk-name macosx26.5 -in-process-plugin-server-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/libSwiftInProcPluginServer.dylib -o /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/BoringNotchSkyLightWindow.o -o /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/BatteryStatusViewModel.o -o /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/TabButton.o -o /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/NowPlayingController.o -o /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/Color+AccentColor.o -o /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/SparkleView.o -o /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/CalendarServiceProviding.o -o /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/VolumeManager.o -index-unit-output-path /boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/BoringNotchSkyLightWindow.o -index-unit-output-path /boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/BatteryStatusViewModel.o -index-unit-output-path /boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/TabButton.o -index-unit-output-path /boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/NowPlayingController.o -index-unit-output-path /boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/Color+AccentColor.o -index-unit-output-path /boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/SparkleView.o -index-unit-output-path /boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/CalendarServiceProviding.o -index-unit-output-path /boringNotch.build/Debug/boringNotch.build/Objects-normal/arm64/VolumeManager.o -index-store-path /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Index.noindex/DataStore -index-system-modules
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Notch/BoringNotchSkyLightWindow.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/models/BatteryStatusViewModel.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Tabs/TabButton.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+/Users/fox/Documents/PROJECTS/Ultimate Notch/UltimateNotch/boringNotch/components/Tabs/TabButton.swift:10:8: error: invalid redeclaration of 'TabButton'
+struct TabButton: View {
+       ^
+/Users/fox/Documents/PROJECTS/Ultimate Notch/UltimateNotch/boringNotch/components/Tabs/VibeIslandView.swift:51:8: note: 'TabButton' previously declared here
+struct TabButton: View {
+       ^
+/Users/fox/Documents/PROJECTS/Ultimate Notch/UltimateNotch/boringNotch/components/Tabs/VibeIslandView.swift:51:8: note: 'TabButton' previously declared here
+struct TabButton: View {
+       ^
+/Users/fox/Documents/PROJECTS/Ultimate Notch/UltimateNotch/boringNotch/components/Tabs/TabButton.swift:27:14: error: incorrect argument labels in call (have 'label:icon:selected:_:', expected 'title:icon:isSelected:_:')
+    TabButton(label: "Home", icon: "tray.fill", selected: true) {
+             ^~~~~~                             ~~~~~~~~
+              title                             isSelected
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/MediaControllers/NowPlayingController.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/Color+AccentColor.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Onboarding/SparkleView.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+/Users/fox/Documents/PROJECTS/Ultimate Notch/UltimateNotch/boringNotch/components/Onboarding/SparkleView.swift:58:13: warning: initialization of immutable value 'area' was never used; consider replacing with assignment to '_' or removing it
+        let area = bounds.width * bounds.height
+        ~~~~^~~~
+        _
+/Users/fox/Documents/PROJECTS/Ultimate Notch/UltimateNotch/boringNotch/components/Onboarding/SparkleView.swift:59:13: warning: immutable value 'baseBirthRate' was never used; consider replacing with '_' or removing it
+        let baseBirthRate: Float = 50
+            ^~~~~~~~~~~~~
+            _
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/Providers/CalendarServiceProviding.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/managers/VolumeManager.swift (in target 'boringNotch' from project 'boringNotch')
+    cd /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch
+    
+
+note: Disabling hardened runtime with ad-hoc codesigning. (in target 'boringNotch' from project 'boringNotch')
+** BUILD FAILED **
+
+
+The following build commands failed:
+	SwiftCompile normal arm64 Compiling\ WindowPositionManager.swift,\ BuddyDictationManager.swift,\ ClaudeAPI.swift,\ BuddyAudioConversionSupport.swift,\ VibeModels.swift,\ VibeSocketServer.swift,\ GeneratedAssetSymbols.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/WindowPositionManager.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/BuddyDictationManager.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/ClaudeAPI.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Clicky/BuddyAudioConversionSupport.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Tabs/VibeIsland/VibeModels.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Tabs/VibeIsland/VibeSocketServer.swift /Users/fox/Library/Developer/Xcode/DerivedData/boringNotch-erpwmghigxwkvkhbaexpbkfkaabt/Build/Intermediates.noindex/boringNotch.build/Debug/boringNotch.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'boringNotch' from project 'boringNotch')
+	SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Tabs/VibeIsland/VibeSocketServer.swift (in target 'boringNotch' from project 'boringNotch')
+	SwiftCompile normal arm64 Compiling\ BoringNotchSkyLightWindow.swift,\ BatteryStatusViewModel.swift,\ TabButton.swift,\ NowPlayingController.swift,\ Color+AccentColor.swift,\ SparkleView.swift,\ CalendarServiceProviding.swift,\ VolumeManager.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Notch/BoringNotchSkyLightWindow.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/models/BatteryStatusViewModel.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Tabs/TabButton.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/MediaControllers/NowPlayingController.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/extensions/Color+AccentColor.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Onboarding/SparkleView.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/Providers/CalendarServiceProviding.swift /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/managers/VolumeManager.swift (in target 'boringNotch' from project 'boringNotch')
+	SwiftCompile normal arm64 /Users/fox/Documents/PROJECTS/Ultimate\ Notch/UltimateNotch/boringNotch/components/Tabs/TabButton.swift (in target 'boringNotch' from project 'boringNotch')
+	Building project boringNotch with scheme boringNotch and configuration Debug
+(5 failures)

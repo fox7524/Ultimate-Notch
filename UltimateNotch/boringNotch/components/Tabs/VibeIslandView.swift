@@ -28,10 +28,10 @@ struct VibeIslandView: View {
             
             // Bottom Tab Bar
             HStack(spacing: 20) {
-                TabButton(title: "Monitor", icon: "square.grid.2x2", isSelected: selectedTab == .monitor) { selectedTab = .monitor }
-                TabButton(title: "Approve", icon: "hand.thumbsup", isSelected: selectedTab == .approve) { selectedTab = .approve }
-                TabButton(title: "Ask", icon: "bubble.left.and.bubble.right", isSelected: selectedTab == .ask) { selectedTab = .ask }
-                TabButton(title: "Jump", icon: "arrow.up.right.square", isSelected: selectedTab == .jump) {
+                VibeTabButton(title: "Monitor", icon: "square.grid.2x2", isSelected: selectedTab == .monitor) { selectedTab = .monitor }
+                VibeTabButton(title: "Approve", icon: "hand.thumbsup", isSelected: selectedTab == .approve) { selectedTab = .approve }
+                VibeTabButton(title: "Ask", icon: "bubble.left.and.bubble.right", isSelected: selectedTab == .ask) { selectedTab = .ask }
+                VibeTabButton(title: "Jump", icon: "arrow.up.right.square", isSelected: selectedTab == .jump) {
                     selectedTab = .jump
                     if let activeSession = vibeManager.sessions.first(where: { $0.isActive }) {
                         vibeManager.jumpToIDE(appName: activeSession.ide)
@@ -48,7 +48,7 @@ struct VibeIslandView: View {
     }
 }
 
-struct TabButton: View {
+struct VibeTabButton: View {
     let title: String
     let icon: String
     let isSelected: Bool
