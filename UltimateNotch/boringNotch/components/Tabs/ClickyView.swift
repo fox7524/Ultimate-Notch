@@ -8,7 +8,7 @@ extension Defaults.Keys {
 }
 
 struct ClickyView: View {
-    @StateObject private var companionManager = (NSApplication.shared.delegate as! AppDelegate).companionManager
+    @ObservedObject private var companionManager = (NSApplication.shared.delegate as! AppDelegate).companionManager
     
     @Default(.anthropicAPIKey) var anthropicAPIKey
     @Default(.elevenLabsAPIKey) var elevenLabsAPIKey

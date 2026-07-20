@@ -15,6 +15,12 @@
 	<string>https://TheBoredTeam.github.io/boring.notch/appcast.xml</string>
 	<key>SUPublicEDKey</key>
 	<string>B1Y47t8C/v8ImurYA+9arEsuCrpxwJSviekiflMElbI=</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Clicky uses your microphone so you can talk to it</string>
+	<key>NSScreenCaptureUsageDescription</key>
+	<string>Clicky needs screen recording access to see your screen and help you.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Clicky uses speech recognition to transcribe your voice when you talk to it</string>
 	<key>UTImportedTypeDeclarations</key>
 	<array>
 		<dict/>

@@ -14,8 +14,16 @@ class VibeManager: ObservableObject {
     }
     
     func startListening() {
-        let socketPath = "/tmp/vibe_island.sock"
+        let appSupport = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
+        let boringNotchDir = appSupport.appendingPathComponent("boringNotch")
+        try? FileManager.default.createDirectory(at: boringNotchDir, withIntermediateDirectories: true)
+        
+        let socketPath = NSTemporaryDirectory() + "vibe.sock"
         unlink(socketPath)
+        
+        // Write the socket path to Application Support so vibe-cli can find it
+        let pathFile = boringNotchDir.appendingPathComponent("socket_path.txt")
+        try? socketPath.write(to: pathFile, atomically: true, encoding: .utf8)
         
         do {
             let parameters = NWParameters()

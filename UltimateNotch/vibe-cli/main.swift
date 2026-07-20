@@ -28,7 +28,15 @@ else if env["TERM_PROGRAM"] == "Freebuff" { ide = "Freebuff" }
 else if env["TERM_PROGRAM"] == "Xcode" || env["__CFBundleIdentifier"] == "com.apple.dt.Xcode" { ide = "Xcode" }
 else if env["TERM_PROGRAM"] == "VisualStudio" { ide = "Visual Studio" }
 
-let connection = NWConnection(to: .unix(path: "/tmp/vibe_island.sock"), using: .tcp)
+let homeDir = FileManager.default.homeDirectoryForCurrentUser
+let pathFile = homeDir.appendingPathComponent("Library/Containers/theboringteam.boringnotch/Data/Library/Application Support/boringNotch/socket_path.txt")
+
+guard let socketPath = try? String(contentsOf: pathFile, encoding: .utf8) else {
+    print("Error: Could not find Vibe Island socket path. Make sure UltimateNotch is running.")
+    exit(1)
+}
+
+let connection = NWConnection(to: .unix(path: socketPath), using: .tcp)
 connection.start(queue: .global())
 
 func sendMessage(_ type: String, payload: String? = nil) {

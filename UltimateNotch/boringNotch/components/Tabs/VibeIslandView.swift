@@ -5,7 +5,7 @@ enum VibeTab {
 }
 
 struct VibeIslandView: View {
-    @StateObject private var vibeManager = VibeManager()
+    @ObservedObject private var vibeManager = (NSApplication.shared.delegate as! AppDelegate).vibeManager
     @State private var selectedTab: VibeTab = .monitor
     
     var body: some View {
