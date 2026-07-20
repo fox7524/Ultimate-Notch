@@ -122,6 +122,7 @@
 		5955950D2E900ED800C66711 /* ApplicationRelauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5955950C2E900ED800C66711 /* ApplicationRelauncher.swift */; };
 		59D8C23C2E589FAA00147B33 /* VolumeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D8C23B2E589FAA00147B33 /* VolumeManager.swift */; };
 		627C07B9EBA1EA9B3441820A /* WindowPositionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CBC6ED67E0315648A969C4 /* WindowPositionManager.swift */; };
+		6951B3CFD873D1DB5FE6FAAC /* VibeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F30DD0D86890785C97C23E /* VibeModels.swift */; };
 		9562627034A52983964F85AC /* CompanionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2479970D3C3ADAA0FE714BE /* CompanionManager.swift */; };
 		9A0887322C7A693000C160EA /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0887312C7A693000C160EA /* TabButton.swift */; };
 		9A0887352C7AFF8E00C160EA /* TabSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0887342C7AFF8E00C160EA /* TabSelectionView.swift */; };
@@ -156,9 +157,10 @@
 		B1F747F92EC7E94000F841DB /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F747F82EC7E94000F841DB /* LottieView.swift */; };
 		B1FEB4992C7686630066EBBC /* PanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FEB4982C7686630066EBBC /* PanGesture.swift */; };
 		C4734D1AA66399700B55D223 /* OverlayWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93C12497BECF3168F8ED4A1 /* OverlayWindow.swift */; };
+		C49FA60F9BEDB0490FB565EE /* VibeSocketServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689A27E9474633D8908EE3E6 /* VibeSocketServer.swift */; };
 		C6CA3EFD1FB2D81204A3E5F9 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF52444CB58B297B57FBA883 /* DesignSystem.swift */; };
 		DFA255D19492D013728AF4E0 /* OpenAIAudioTranscriptionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC3D359DAEF487A7278144 /* OpenAIAudioTranscriptionProvider.swift */; };
-		E151949EFFFB78FC42E626EC /* VibeIslandPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D752C365C61F517E5B67CF89 /* VibeIslandPlaceholderView.swift */; };
+		E151949EFFFB78FC42E626EC /* VibeIslandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D752C365C61F517E5B67CF89 /* VibeIslandView.swift */; };
 		E9BDD6EA11893A74FAF29847 /* BuddyTranscriptionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77986AF65390CCDE265AF46 /* BuddyTranscriptionProvider.swift */; };
 		EB873D5E3D6FC481EC22AD7B /* ElementLocationDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C625C88740A291D7EDFAE0E /* ElementLocationDetector.swift */; };
 		EC3E5289EFF0B7059BED3AEB /* AppBundleConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C70F82888812477C49A9EB3 /* AppBundleConfiguration.swift */; };
@@ -309,6 +311,7 @@
 		5955950C2E900ED800C66711 /* ApplicationRelauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRelauncher.swift; sourceTree = "<group>"; };
 		59D8C23B2E589FAA00147B33 /* VolumeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeManager.swift; sourceTree = "<group>"; };
 		66CBC6ED67E0315648A969C4 /* WindowPositionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WindowPositionManager.swift; path = WindowPositionManager.swift; sourceTree = "<group>"; };
+		689A27E9474633D8908EE3E6 /* VibeSocketServer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VibeSocketServer.swift; sourceTree = "<group>"; };
 		6FA0491417A996D27CFEDB10 /* BuddyDictationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BuddyDictationManager.swift; path = BuddyDictationManager.swift; sourceTree = "<group>"; };
 		7781EC1927207C4EFDF2731F /* OpenAIAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OpenAIAPI.swift; path = OpenAIAPI.swift; sourceTree = "<group>"; };
 		8C625C88740A291D7EDFAE0E /* ElementLocationDetector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ElementLocationDetector.swift; path = ElementLocationDetector.swift; sourceTree = "<group>"; };
@@ -344,7 +347,8 @@
 		C77986AF65390CCDE265AF46 /* BuddyTranscriptionProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BuddyTranscriptionProvider.swift; path = BuddyTranscriptionProvider.swift; sourceTree = "<group>"; };
 		C9DC3D359DAEF487A7278144 /* OpenAIAudioTranscriptionProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OpenAIAudioTranscriptionProvider.swift; path = OpenAIAudioTranscriptionProvider.swift; sourceTree = "<group>"; };
 		D1909F5487011AD226549F39 /* ClickyView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClickyView.swift; path = ClickyView.swift; sourceTree = "<group>"; };
-		D752C365C61F517E5B67CF89 /* VibeIslandPlaceholderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VibeIslandPlaceholderView.swift; path = VibeIslandPlaceholderView.swift; sourceTree = "<group>"; };
+		D752C365C61F517E5B67CF89 /* VibeIslandView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VibeIslandView.swift; path = VibeIslandView.swift; sourceTree = "<group>"; };
+		D7F30DD0D86890785C97C23E /* VibeModels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VibeModels.swift; sourceTree = "<group>"; };
 		D93C12497BECF3168F8ED4A1 /* OverlayWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverlayWindow.swift; path = OverlayWindow.swift; sourceTree = "<group>"; };
 		DEEE98B80F9009925FA3188A /* CompanionResponseOverlay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompanionResponseOverlay.swift; path = CompanionResponseOverlay.swift; sourceTree = "<group>"; };
 		E2479970D3C3ADAA0FE714BE /* CompanionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompanionManager.swift; path = CompanionManager.swift; sourceTree = "<group>"; };
@@ -710,7 +714,8 @@
 				9A0887312C7A693000C160EA /* TabButton.swift */,
 				9A0887342C7AFF8E00C160EA /* TabSelectionView.swift */,
 				D1909F5487011AD226549F39 /* ClickyView.swift */,
-				D752C365C61F517E5B67CF89 /* VibeIslandPlaceholderView.swift */,
+				D752C365C61F517E5B67CF89 /* VibeIslandView.swift */,
+				E0A39C74F0617D271956D06A /* VibeIsland */,
 			);
 			path = boringNotch/components/Tabs;
 			sourceTree = SOURCE_ROOT;
@@ -852,6 +857,16 @@
 			name = Clicky;
 			path = boringNotch/components/Clicky;
 			sourceTree = SOURCE_ROOT;
+		};
+		E0A39C74F0617D271956D06A /* VibeIsland */ = {
+			isa = PBXGroup;
+			children = (
+				D7F30DD0D86890785C97C23E /* VibeModels.swift */,
+				689A27E9474633D8908EE3E6 /* VibeSocketServer.swift */,
+			);
+			name = VibeIsland;
+			path = VibeIsland;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -1115,7 +1130,7 @@
 				11CFC6632E09918400748C80 /* MusicControllerSelectionView.swift in Sources */,
 				B1F0A0022E60000100000001 /* BrightnessManager.swift in Sources */,
 				14D1F947C5F17511D8CF7AF1 /* ClickyView.swift in Sources */,
-				E151949EFFFB78FC42E626EC /* VibeIslandPlaceholderView.swift in Sources */,
+				E151949EFFFB78FC42E626EC /* VibeIslandView.swift in Sources */,
 				52D23CB20295C91AC25A671E /* AssemblyAIStreamingTranscriptionProvider.swift in Sources */,
 				F5DF586BE00711C9C14C3F03 /* AppleSpeechTranscriptionProvider.swift in Sources */,
 				E9BDD6EA11893A74FAF29847 /* BuddyTranscriptionProvider.swift in Sources */,
@@ -1136,6 +1151,8 @@
 				FA101CA65358B3E2C8FE737A /* BuddyDictationManager.swift in Sources */,
 				3B63CBAB79F44CFE3A193F44 /* ClaudeAPI.swift in Sources */,
 				4B1621C4850C9DF3B1C0A62D /* BuddyAudioConversionSupport.swift in Sources */,
+				6951B3CFD873D1DB5FE6FAAC /* VibeModels.swift in Sources */,
+				C49FA60F9BEDB0490FB565EE /* VibeSocketServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
