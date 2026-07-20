@@ -67,4 +67,19 @@ class VibeManager: ObservableObject {
             }
         }
     }
+    
+    func jumpToIDE(appName: String) {
+        let scriptSource = """
+        tell application "\(appName)"
+            activate
+        end tell
+        """
+        if let script = NSAppleScript(source: scriptSource) {
+            var error: NSDictionary?
+            script.executeAndReturnError(&error)
+            if let error = error {
+                print("AppleScript error: \(error)")
+            }
+        }
+    }
 }
